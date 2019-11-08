@@ -1,6 +1,6 @@
 {
     "name": "every-ready",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A promise that resolves when multiple values are set.",
     "repository": "https://github.com/Richienb/every-ready.git",
     "author": "Richie Bendall <richiebendall@gmail.com>",
