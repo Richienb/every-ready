@@ -1,7 +1,15 @@
 "use strict"
 
-module.exports = (input, { postfix = "rainbows" } = {}) => {
-    if (typeof input !== "string") throw new TypeError(`Expected a string, got ${typeof input}`)
+const WheneverReady = require("whenever-ready")
+const onChange = require("on-change")
+const _ = require("lodash")
+const replaceArrayItems = require("replace-array-items")
 
-    return `${input} & ${postfix}`
+module.exports = class EveryReady extends WheneverReady {
+    constructor(expect) {
+        super()
+        this.readiness = onChange(replaceArrayItems(new Array(expect), false), () => {
+            this.ready = _.every(this.readiness)
+        })
+    }
 }

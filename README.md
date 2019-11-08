@@ -1,41 +1,52 @@
-# The module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# Every ready [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/every-ready/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/every-ready)
 
-My awesome module.
+A promise that resolves when multiple values are set.
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/every-ready.png)](https://npmjs.com/package/every-ready)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install every-ready
 ```
 
 ## Usage
 
 ```js
-const theModule = require("the-module");
+const EveryReady = require("every-ready");
+const evReady = new EveryReady(2);
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+evReady.readiness[0] = true;
+evReady.ready;
+// false
+
+evReady.readiness[1] = true;
+evReady.ready;
+// true
 ```
 
 ## API
 
-### theModule(input, options?)
+### class EveryReady(expect) extends [WheneverReady](https://github.com/Richienb/whenever-ready#instance-wheneverready)
 
-#### input
+#### expect
 
-Type: `string`
+Type: `number`
 
-Lorem ipsum.
+The amount of values that must be truthy.
 
-#### options
+### instance EveryReady
 
-Type: `object`
+#### readiness
 
-##### postfix
+Type: `array`
 
-Type: `string`\
-Default: `rainbows`
+The readiness values to set.
 
-Lorem ipsum.
+#### ready
+
+See [WheneverReady docs](https://github.com/Richienb/whenever-ready#ready-1).
+
+#### when()
+
+See [WheneverReady docs](https://github.com/Richienb/whenever-ready#when).

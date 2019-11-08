@@ -1,8 +1,8 @@
 {
-    "name": "the-module",
-    "version": "0.0.0",
-    "description": "My awesome module.",
-    "repository": "https://github.com/Richienb/the-module.git",
+    "name": "every-ready",
+    "version": "1.0.0",
+    "description": "A promise that resolves when multiple values are set.",
+    "repository": "https://github.com/Richienb/every-ready.git",
     "author": "Richie Bendall <richiebendall@gmail.com>",
     "license": "MIT",
     "main": "index.js",
@@ -11,14 +11,25 @@
         "index.d.ts"
     ],
     "engines": {
-        "node": ">=8"
+        "node": ">=6"
     },
     "scripts": {
         "lint": "eslint .",
         "test": "yarn lint && ava"
     },
-    "keywords": [],
-    "dependencies": {},
+    "keywords": [
+        "all",
+        "every",
+        "ready",
+        "wait",
+        "when"
+    ],
+    "dependencies": {
+        "lodash": "^4.17.15",
+        "on-change": "^1.6.2",
+        "replace-array-items": "^1.0.0",
+        "whenever-ready": "^1.0.1"
+    },
     "devDependencies": {
         "ava": "^2.1.0",
         "eslint": "^6.6.0",
