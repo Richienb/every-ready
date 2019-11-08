@@ -9,7 +9,7 @@ module.exports = class EveryReady extends WheneverReady {
     constructor(expect) {
         super()
         this.readiness = onChange(replaceArrayItems(new Array(expect), false), () => {
-            this.ready = _.every(this.readiness)
+            super.ready = _.every(this.readiness)
         })
     }
 }
