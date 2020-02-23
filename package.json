@@ -14,7 +14,7 @@
         "node": ">=6"
     },
     "scripts": {
-        "lint": "eslint .",
+        "lint": "xo",
         "test": "yarn lint && ava"
     },
     "keywords": [
@@ -25,17 +25,18 @@
         "when"
     ],
     "dependencies": {
-        "lodash": "^4.17.15",
         "on-change": "^1.6.2",
-        "replace-array-items": "^1.0.0",
-        "whenever-ready": "^1.0.1"
+        "whenever-ready": "^1.1.0"
     },
     "devDependencies": {
-        "ava": "^2.1.0",
-        "eslint": "^6.6.0",
-        "eslint-config-richienb": "^0.2.2"
+        "ava": "^3.3.0",
+        "eslint-config-richienb": "^0.3.0",
+        "xo": "^0.26.1"
     },
-    "eslintConfig": {
+    "resolutions": {
+        "eslint": "^6.8.0"
+    },
+    "xo": {
         "extends": "richienb/node"
     }
 }

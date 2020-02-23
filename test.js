@@ -1,5 +1,5 @@
-import test from "ava"
-import EveryReady from "."
+const test = require("ava")
+const EveryReady = require(".")
 
 test("main", async (t) => {
     const evReady = new EveryReady(2)

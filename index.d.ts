@@ -28,4 +28,4 @@ declare class EveryReady extends WheneverReady {
     public readiness: []
 }
 
-export = EveryReady;
+export = EveryReady
